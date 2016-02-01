@@ -5,13 +5,11 @@ import {Injectable} from 'angular2/core';
 
 export class DataService{
   constructor(){
-
     this.storage = new Storage(SqlStorage, {name: 'todoapp'});
     this.data = null;
 
     this.storage.get('todoapp').then((todos) =>{
       this.data = JSON.parse(todos);
-      console.log(this.data);
     })
   }
 
@@ -19,15 +17,27 @@ export class DataService{
     return this.storage.get('todoapp');
   }
 
-  save(item){
+  save (item) {
     if(!this.data){
       this.data = [item];
-      let newData = JSON.stringify(item);
-      this.storage.set('todoapp', newData);
-    } else {
-        this.data.push(item);
-        let newData = JSON.stringify(this.data);
-        this.storage.set('todoapp', newData);
     }
+    else{
+      this.data.push(item);
+    }
+    let newItem  = JSON.stringify(this.data);
+    this.storage.set('todoapp',newItem);
   }
+
+  update (item, index) {
+    this.data[index] = item;
+    let updatedList = JSON.stringify(this.data);
+    this.storage.set('todoapp', updatedList);
+  }
+
+  remove (item, index) {
+    this.data.splice(index,1);
+    let updatedList = JSON.stringify(this.data);
+    this.storage.set('todoapp', updatedList);
+  }
+
 }
