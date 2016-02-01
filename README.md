@@ -1,11 +1,11 @@
 # Ionic2Todo
-Implementation of TodoMVC in Ionic 2 beta
-Based off the ionic Todo application built by Andrew Morony.
+Implementation of TodoMVC in Ionic 2 beta  
+Based off the Ionic Todo application built by Andrew Morony.
 
 ## Running the application
-1. Make sure you have the ionic 2 beta CLI installed first by running:
+1. Make sure you have the ionic 2 beta CLI installed first by running:  
 `$ npm install -g ionic@beta`
-2. then, you use the ionic CLI to serve the application to your localhost:
+2. then, you use the ionic CLI to serve the application to your localhost:  
 `$ ionic serve`
 
 ## Notes
