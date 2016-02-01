@@ -8,17 +8,18 @@
 </ion-navbar>
 
 <ion-content class="home">
-<!--   <ion-card>
-    <ion-card-header>
-      Card Header
-    </ion-card-header>
-    <ion-card-content>
-      Hello World
-    </ion-card-content>
-  </ion-card> -->
   <ion-list>
-    <ion-item *ngFor="#item of items" (click)="viewItem(item)">
-      {{item.title}}
+    <ion-item-sliding *ngFor="#item of items" (click)="viewItem(item)">
+      <h3>{{item.title}}</h3>
+      <p>{{item.description}}</p>
     </ion-item>
+    <ion-item-options>
+      <button light (click)="editItem(slidingItem, item)">
+        <ion-icon name="create"></ion-icon> Edit
+      </button>
+      <button danger (click)="deleteItem(slidingItem, item)">
+        <ion-icon name="trash"></ion-icon> Delete
+      </button>
+    </ion-item-options>
   </ion-list>
 </ion-content>
