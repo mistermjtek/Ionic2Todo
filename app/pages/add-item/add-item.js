@@ -9,30 +9,23 @@ export class AddItemPage {
   	this.nav = nav;
     this.navParams = navParams;
 
-    this.title = "";
-    this.description = "";
+    this.newItem = {
+      title: '',
+      description: ''
+    };
 
   }
 
   saveItem() {
-    let newItem = this.newItem;
-    // event.preventDefault();
 
-    // let newItem = {
-    //   title: this.itemForm.value.title,
-    //   description:this.itemForm.value.description
-    // }
+    if (!this.newItem.title && !this.newItem.description) {
+      return false; //implement some error handling
+    }
+
+    let newItem = this.newItem;
 
     this.navParams.get('listPage').saveItem(newItem);
     this.nav.pop();
   }
-  // saveItem() {
-  // 	let newItem = {
-  //     title: this.title;
-  //     description: this.description;
-  //   }
 
-  //   this.navParams.get('listPage').saveItem(newItem);
-  //   this.nav.pop();
-  // }
 }
