@@ -1,8 +1,8 @@
 import {Page, NavController, NavParams} from 'ionic/ionic';
-import { FORM_DIRECTIVES } from 'angular2/common';
+// import { FORM_DIRECTIVES } from 'angular2/common';
 
 @Page({
-  directives: [FORM_DIRECTIVES],
+  // directives: [FORM_DIRECTIVES],
   templateUrl: 'build/pages/add-item/add-item.html'
 })
 export class AddItemPage {
