@@ -11,17 +11,15 @@
 
 <ion-content class="home">
   <ion-list>
-    <ion-input floating-label>
-      <ion-label>Title</ion-label>
-      <input type="text" [(ngModel)]="newItem.title"/>
-    </ion-input>
+    <ion-item>
+      <ion-label floating>Title</ion-label>
+      <ion-input type="text" [(ngModel)]="newItem.title"></ion-input>
+    </ion-item>
 
-    <ion-input floating-label>
-      <ion-label>
-        Description
-      </ion-label>
-      <textarea [(ngModel)]="newItem.description"></textarea>
-    </ion-input>
-    <button fab fabfnn-right fab-bottom (click)="saveItem()"><ion-icon name="checkmark"></ion-icon></button>
+    <ion-item>
+      <ion-label floating>Description</ion-label>
+      <ion-textarea [(ngModel)]="newItem.description"></ion-textarea>
+    </ion-item>
+    <button fab fab-right fab-bottom (click)="saveItem()"><ion-icon name="checkmark"></ion-icon></button>
   </ion-list>
 </ion-content>

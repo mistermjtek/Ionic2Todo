@@ -11,13 +11,13 @@
 
 <ion-content>
   <ion-list>
-    <ion-input stacked-label>
+    <ion-item>
       <ion-label>Title</ion-label>
-      <input type="text" [(ngModel)]="item.title">
-    </ion-input>
-    <ion-input stacked-label>
+      <ion-input type="text" [(ngModel)]="item.title"></ion-input>
+    </ion-item>
+    <ion-item>
       <ion-label>Description</ion-label>
-      <textarea [(ngModel)]="item.description"></textarea>
-    </ion-input>
+      <ion-textarea [(ngModel)]="item.description"></ion-textarea>
+    </ion-item>
   </ion-list>
 </ion-content>
